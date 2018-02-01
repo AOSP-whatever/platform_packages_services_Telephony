@@ -811,7 +811,7 @@ final class TelecomAccountRegistry {
 
                     // In SSR case, UiccCard's would be disposed hence the provision state received as
                     // CARD_NOT_PRESENT but valid subId present in SubscriptionInfo record.
-                    if (provisionStatus == INVALID_STATE || ((provisionStatus == CARD_NOT_PRESENT)
+                    if (((provisionStatus == CARD_NOT_PRESENT)
                             && mSubscriptionManager.isActiveSubId(subscriptionId))) {
                         isAnyProvisionInfoPending = true;
                     }
